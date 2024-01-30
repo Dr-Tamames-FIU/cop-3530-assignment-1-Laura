@@ -1,4 +1,4 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=13502325&assignment_repo_type=AssignmentRepo)
+_[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=13502325&assignment_repo_type=AssignmentRepo)
 # Assignment 1
 
 ## Question 1: (100%)
@@ -20,10 +20,11 @@ You are to write a Java program that determines the amount of work each of these
 ### ALGORITHM 1
 Start with a maximum sum of 0. Compute the sum of each 1-element subarray, then compute the sum of each 2-element subarray, then compute the sum of each 3-element subarray, etc. For each sum you compute, if it is larger than the maximum sum you've seen, then it becomes the maximum sum.
 
-public static int algorithm1(int[] A) {
-    int maxSum = 0;
 
-    // Iterate through all subarrays
+public static int algorithm1(int[] A) {
+   int maxSum = 0;
+
+// Iterate through all subarrays
     for (int i = 0; i < A.length; i++) {
         int sum = 0;
         for (int j = i; j < A.length; j++) {
@@ -42,6 +43,7 @@ public static int algorithm1(int[] A) {
 
 ### ALGORITHM 2 
 Same as algorithm 1 but now once you compute the sum of the subarray from A[i] to A[j], the sum of the subarray from A[i] to A[j+1] is just the previous sum you computed plus A[j+1]. Don't add up all of the previous values all over again.
+
 
 public static int algorithm2(int[] A) {
     int maxSum = 0;
@@ -70,6 +72,7 @@ public static int algorithm2(int[] A) {
 
 ### ALGORITHM 3 (Optional)
 Same as algorithm 1 but store the temporary steps in an array. 
+
 
 public static int algorithm3(int[] A) {
     int maxSum = 0;
@@ -116,8 +119,8 @@ long elapsed = endTime − startTime;
 ```
 This class will run your algorithms for randomly generated arrays of size 5, 10, 15, ..., up to 50. For each array size,it will generate 20 arrays (one at a time) and run the algorithms with each array, averaging the returned number of assignment statements executed for each algorithm separately.
 
-public class MethodTester {
 
+public class MethodTester {
 	public static void main(String[] args) {
 		// Test arrays
 		int[][] arrays = { {-1, 12, -3, 14, -4, 3},};
@@ -185,6 +188,7 @@ To generate a random number between x and y, use the following Java expression:
 ```java
 (int)(Math.random()*(y-x+1) + x) 
 ```
+
 public int[] GenerateArray (int size) {
     int [] array = new int[size];
     for (int i=0; i < size; i++) {
@@ -192,3 +196,4 @@ public int[] GenerateArray (int size) {
     }
     return array;
 }
+_
