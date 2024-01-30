@@ -23,7 +23,6 @@ Start with a maximum sum of 0. Compute the sum of each 1-element subarray, then 
 
 public static int algorithm1(int[] A) {
    int maxSum = 0;
-
 // Iterate through all subarrays
     for (int i = 0; i < A.length; i++) {
         int sum = 0;
