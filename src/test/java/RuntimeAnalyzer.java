@@ -32,7 +32,9 @@ public class RuntimeAnalyzer {
         int[] array = new int[arraySize];
        
         //TODO
-
+       for (int i = 0; i < arraySize; i++) {
+            array[i] = (int) (Math.random() * 110) - 10; // values between -10 and 99
+        }
         return array;
     }
 
