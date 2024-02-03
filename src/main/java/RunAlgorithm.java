@@ -16,12 +16,18 @@ public class MethodTester
         int maxSum = 0;
        
         //TODO
-
-        //loop
-            
-        //loop
-                
-        //loop
+    // Iterate through all subarrays
+    for (int i = 0; i < nums.length; i++) {
+        int sum = 0;
+        for (int j = i; j < nums.length; j++) {
+            // Compute sum of subarray A[i..j]
+            sum += nums[j];
+            // Update maxSum if current sum is greater
+            if (sum > maxSum) {
+                maxSum = sum;
+            }
+         }
+    }
         return maxSum;
     }
 
@@ -31,9 +37,24 @@ public class MethodTester
         int maxSum = 0;
         
         //TODO
-        
-        //loop
-
+// Iterate through all subarrays
+    for (int i = 0; i < nums.length; i++) {
+        int sum = 0;
+        // Start with the sum of the first element
+        sum = nums[i];
+        // Update maxSum if current sum is greater
+        if (sum > maxSum) {
+            maxSum = sum;
+        }
+        for (int j = i + 1; j < nums.length; j++) {
+            // Compute sum of subarray nums[i..j] using previous sum
+            sum += nums[j];
+            // Update maxSum if current sum is greater
+            if (sum > maxSum) {
+                maxSum = sum;
+            }
+        }
+    }
         return maxSum;
     }
 
@@ -44,7 +65,23 @@ public class MethodTester
         int maxSum = 0;
        
         //TODO
-
+    int n = nums.length;
+    
+    // Array to store sums
+    int[] newArray = new int[n];
+    
+    // Compute sums for all subarrays
+    for (int i = 0; i < n; i++) {
+        int sum = 0;
+        for (int j = i; j < n; j++) {
+            sum += nums[j];
+            newArray[j] = sum;
+            // Update maxSum if current sum is greater
+            if (sum > maxSum) {
+                maxSum = sum;
+            }
+         }
+    }
         return maxSum;
     }
 }
